@@ -14,7 +14,7 @@ Para iniciar o frontend
 
 ### A aplicação backend utiliza o Swagger 2 para documentação. Paca acessar é necessario buildar e acessar o link
     
-    localhost:8080/swagger-ui
+    localhost:8080/swagger-ui-custom.html
     
 ### Para evitar a lixo no banco, também é possivel criar um docker para o mysql com o seguinte comando
     
