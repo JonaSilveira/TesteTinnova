@@ -4,19 +4,19 @@
 
       <div class="form-group">
           <label for="name">Veiculo</label>
-          <input type="text" class="form-control" id="veiculo" [(ngModel)]="veiculo.veiculo" placeholder="Enter Name">
+          <input type="text" class="form-control" id="veiculo" [(ngModel)]="veiculo.veiculo" placeholder="Nome do veiculo">
       </div>
       <div class="form-group">
           <label for="age">Marca</label>
-          <input type="text" class="form-control" id="marca" [(ngModel)]="veiculo.marca" placeholder="Enter Name">
+          <input type="text" class="form-control" id="marca" [(ngModel)]="veiculo.marca" placeholder="Marca">
       </div>
       <div class="form-group">
           <label for="address">Ano</label>
-          <input type="number" min="1920" max="2050" class="form-control" id="ano" [(ngModel)]="veiculo.ano" placeholder="Enter Name">
+          <input type="number" min="1920" max="2050" class="form-control" id="ano" [(ngModel)]="veiculo.ano" placeholder="Ano">
       </div>
       <div class="form-group">
         <label for="address">Descrição</label>
-        <input type="text" class="form-control" id="descricao" [(ngModel)]="veiculo.descricao" placeholder="Enter Name">
+        <input type="text" class="form-control" id="descricao" [(ngModel)]="veiculo.descricao" placeholder="Descrição">
     </div>
     <div class="form-group form-check form-switch">
       <input
@@ -27,5 +27,5 @@
       />
       <label class="form-check-label" for="vendido">Vendido</label>
       </div>
-      <button type="submit" class="btn btn-primary" (click)="submitForm()">Add</button>
+      <button type="submit" class="btn btn-primary" (click)="submitForm()">Adicionar</button>
 </div>
