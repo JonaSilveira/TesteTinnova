@@ -18,4 +18,4 @@ Para iniciar o frontend
     
 ### Para evitar a lixo no banco, também é possivel criar um docker para o mysql com o seguinte comando
     
-    docker run -d -p 3308:3306 -e MYSQL_ROOT_PASSWORD=xz2k600600 -e MYSQL_DATABASE=tinnova
+    docker run --name=tinnovatest -d -p 3308:3306 -e MYSQL_ROOT_PASSWORD=xz2k600600 -e MYSQL_DATABASE=tinnova mysql
