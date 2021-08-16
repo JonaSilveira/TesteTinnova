@@ -1,0 +1,31 @@
+<div class="container">
+
+  <h3>Cria um novo Veiculo</h3>
+
+      <div class="form-group">
+          <label for="name">Veiculo</label>
+          <input type="text" class="form-control" id="veiculo" [(ngModel)]="veiculo.veiculo" placeholder="Enter Name">
+      </div>
+      <div class="form-group">
+          <label for="age">Marca</label>
+          <input type="text" class="form-control" id="marca" [(ngModel)]="veiculo.marca" placeholder="Enter Name">
+      </div>
+      <div class="form-group">
+          <label for="address">Ano</label>
+          <input type="number" min="1920" max="2050" class="form-control" id="ano" [(ngModel)]="veiculo.ano" placeholder="Enter Name">
+      </div>
+      <div class="form-group">
+        <label for="address">Descrição</label>
+        <input type="text" class="form-control" id="descricao" [(ngModel)]="veiculo.descricao" placeholder="Enter Name">
+    </div>
+    <div class="form-group form-check form-switch">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="vendido"
+        [(ngModel)]="veiculo.vendido"
+      />
+      <label class="form-check-label" for="vendido">Vendido</label>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="submitForm()">Add</button>
+</div>

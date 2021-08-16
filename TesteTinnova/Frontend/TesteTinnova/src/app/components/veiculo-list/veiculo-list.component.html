@@ -1,0 +1,105 @@
+<div class="container">
+  <br/>
+  <br/>
+  <br/>
+  <h3>Lista todos Veiculos</h3>
+  <div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" (ngModelChange)="findByQuery()"
+           autocomplete="off"
+           placeholder="Coloque o nome do campo com : e o valor desejado">
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Veiculo</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Descricao</th>
+      <th scope="col">Ano</th>
+      <th scope="col">Vendido</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of veiculos">
+      <td>{{item.veiculo}}</td>
+      <td>{{item.marca}}</td>
+      <td>{{item.descricao}}</td>
+      <td>{{item.ano}}</td>
+      <td>
+        <div class="form-group form-check form-switch">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="vendido"
+            (click)="edit(item.id, item)"
+            [(ngModel)]="item.vendido"
+          />
+          <label class="form-check-label" for="vendido">Vendido</label>
+        </div>
+      </td>
+      <td style="display: flex">
+        <button type="button" class="btn btn-warning btn-sm" (click)="update(item.id)">Edit</button>
+        <button type="button" class="btn btn-danger btn-sm ml-1" (click)="delete(item.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-success" [routerLink]="[ '/create']">Add Veiculo</button>
+
+  <br/>
+  <br/>
+  <div>
+    <h2><strong>Informações uteis:</strong></h2>
+    <br/>
+    <br/>
+    <br/>
+    <span>Carros registrados na ultima semana:</span>
+    <ul *ngFor="let veiculo of lastWeek">
+      <li>
+        {{veiculo.veiculo}} - {{veiculo.marca}}
+      </li>
+    </ul>
+    <br/>
+    <br/>
+    <br/>
+    <span>
+      Quantidade de carros por marca:
+    </span>
+   <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Marca</th>
+        <th scope="col">Quantidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of marca">
+        <td>{{item.marca}}</td>
+        <td>{{item.quantidade}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <span>
+      Quantidade de carros por decada:
+    </span>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Ano</th>
+      <th scope="col">Quantidade</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of decade">
+      <td>{{item.ano}}</td>
+      <td>{{item.quantidade}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
